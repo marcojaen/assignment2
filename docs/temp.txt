@@ -1,0 +1,23 @@
+Marco-Jaen:docs metadmin$ git remote -v
+origin	https://github.com/marcojaen/assignment2.git (fetch)
+origin	https://github.com/marcojaen/assignment2.git (push)
+Marco-Jaen:docs metadmin$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Marco-Jaen:docs metadmin$ git push -u origin master
+Username for 'https://github.com': marcojaen
+Password for 'https://marcojaen@github.com': 
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 1.05 KiB | 358.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/marcojaen/assignment2.git
+   f4975e5..34756bd  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Marco-Jaen:docs metadmin$ 
