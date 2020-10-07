@@ -1,0 +1,135 @@
+// **********************************************
+// * Name: Marco Jaen				*
+// * Course: CEN4020- Software Engineering I	*
+// * Assignment #3: Git and OOP Warmup		*
+// * Date: 07 Oct. 2020				*
+// * Instructor: Dr. David Gaitros		*
+// **********************************************
+
+-Date where I went through the Git Lab Tutorials: Monday 05, Oct - Tuesday 06, Oct
+-Date where I setup my GitHub Account: July 2019
+
+1) Marco-Jaen:docs metadmin$ git push -u origin master
+Username for 'https://github.com': marcojaen
+Password for 'https://marcojaen@github.com':
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 1.05 KiB | 358.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/marcojaen/assignment2.git
+   f4975e5..34756bd  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Marco-Jaen:docs metadmin$
+
+2) So far, there have been a total of 10 commits done to the repository. Of which, I have done 4 commits,
+and "Esteban Parra" (where we forked the repo from) has done 6 more, having 10 in total. The git command I used
+to get this information was: git log
+
+3) The README.md file was modified last on Tuesday, October 6th, at 18:22:32. This change was done by myself.
+The git command I used to get this information was: git log /path/to/file
+Which in my case would be: git log /Users/metadmin/Desktop/GitASGN/assignment2/README.md. Below is the 
+output of what I got by running the command above.
+
+Marco-Jaen:docs metadmin$ git log /Users/metadmin/Desktop/GitASGN/assignment2/README.md
+commit c2a22cae6f48345493f15967245a3bcaffe4e4e7
+Author: MET Admin <metadmin@Marco-Jaen.local>
+Date:   Tue Oct 6 18:22:32 2020 -0500
+
+    Updated the README file containing my name, and my FSUID
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+4) One reason why branches are used in a Git repository, is that they provide a team of developers a way of
+collaboration and transparency, by creating lightweight pointers to commits in history that can be easily created
+and deprecated when no longer needed. Another reason is that it allows developers to fork a certain repository,
+branch out their own features or fix bugs, and then add the branch that has all of the changes. It is basically
+a "snapshot" that allows us to clean up any issues or bugs, and add new features before merging it to the main branch.
+
+5) The difference between git log and git status is that git status will show which changes have been staged, and which
+haven't. Git status does not show any information about the committed project history. To see the information about the committed
+project history, we use git log. Git log will show all of the committed snapshots, and we can search specific files, filter them,
+and search for specific changes, git log only works with the committed history, while git status shows the working directory and
+staging area.
+
+6) The command that I would use to see the commits where "Vehicle.h" was one of the committed files is: git log --follow <file path>
+In my case, I ran the following git log command: git log --follow /Users/metadmin/Desktop/GitASGN/assignment2/Vehicle.h to see all
+of the commits where "Vehicle.h" was one of the committed files. Below is the output I received after I ran the command mentioned
+previously:
+
+Marco-Jaen:assignment2 metadmin$ git log --follow /Users/metadmin/Desktop/GitASGN/assignment2/Vehicle.h
+commit 03106e92a1e36708334c69dd071088c6d0937b1d
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 11 16:58:59 2019 -0400
+
+    -> Declared the trivial destructors for all classes
+    -> Fully formatted toString methods for all classes
+    -> Added test cases in the main method for testing the implementations
+    -> Added validation on value for engine sizes in the  Car class
+
+commit f9cd890b3f89fbe5920a1fdf7da34ee915ba27b9
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:42:39 2019 -0400
+
+    -> Partial implementation of PoweredVehicle and Car
+    -> Definition of virtual functions
+
+commit f9c24b027e6275ff6a1911241014c44971b4e8d0
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:04:36 2019 -0400
+
+    Refactored Vehicle class to separate definition and declarations
+    Added mileageEstimate abstract method to Vehicle
+    Implemented the Bicycle class
+
+commit 4f6c88c953f4601929df7980a19dcdaee4f13854
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 14:59:19 2019 -0400
+
+    Base Vehicle class created
+
+7) The command that I would use to see the commits whose commit message contains the word "file" is:
+git log --grep="file"
+This command will retrieve all of the commits with messages containing the word "file".
+
+8) I. In the context of object-oriented programming, inheritance is the way where we can derive a class from another class
+for a hierarchy of classes, that might share different methods or attributes. For instance, we might have a "Pet" class, and
+another "Dog" class that inherits from the "Pet" class, having a child-parent relationship. The "Dog" class might now have
+several methods or attributes that the "Pet" class had.
+
+   II. In the context of object-oriented programming, polymorphism is defined as "many forms" or "many shapes" as described 
+in the class's textbook. Furthermore, this would mean that functions, objects and variables can have many different forms.
+One example of polymorphism is having a "Shape" class, and the classes that inherit from it, can have different underlying
+data. Like for instance, a "circle" class and a "square" class that inherits from the "Shape" class will have different areas,
+perimeters, etc. 
+
+   III. In the context of object-oriented programming, encapsulation is defined as the bundling of data into one unit of all
+aspects of the real-world entity modeled by that unit. In other words, we gather data and the methods that operate on that data,
+into one single unit. We can also hide specific data that we would not want the users to see, using different "getters" and "setters"
+methods in our class, using abstraction to hide this data.
+
+9) The main difference between the "Dictator and Lieutenants" workflow and the "Integration manager" workflow is that in the
+"Dictator and Lieutenants" workflow, everyone makes a pull from a one central/blessed repository, and only the dictator can
+push to it. Then, the dictator will merge any changes in the lieutenant repositories and solve any arising conflicts. On the other
+hand, in the "Integration Manager" workflow, each developer makes a push to their own public repository, and pull from the blessed/
+central repository, and basically, each developer makes a push or pull on their own public repository, while in the "Dictator and
+Lieutenant" workflow, developers push their changes to their assigned lieutenant repository.
+
+10) A team of 100 developers can greatly benefit from following the "Dictator and Lieutenants" workflow, instead of the
+"Centralized" workflow, by ensuring and solving any arising conflicts. In the "Dictator and Lieutenants" workflow, pushes are 
+more organized, as some developers will push to their assigned lieutenant repository, greatly diminishing the bugs and errors
+by making sure that it is pushed to a repository, which is revised again by the dictator, who will then push it to the dictator
+repository. This workflow provides a team of many developers to check the changes made, go over what the changes were, and merging
+the changes into a single repository, making the workflow very organized. On the other hand, in a "Centralized" workflow, there 
+is only one shared repository, where each developer has to pull any changes in the central repository and resolve conflicts before
+pushing the changes. The problem arises when a big number of developers work on the same repository at the same time, since there
+will be a great amount of pushes, mergings, and pulls. If a developer pulls a repository, is working on a new feature, but another
+developer pushes to the repository making bug fixes, the previous developer will have to re-pull the shared repository, to ensure
+that the new feature that he is working on will work with the newer version. We can see how quickly this workflow will get tedious
+with a great number of developers.
