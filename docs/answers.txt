@@ -1,6 +1,7 @@
 // **********************************************
 // * Name: Marco Jaen				*
 // * Course: CEN4020- Software Engineering I	*
+// * Github username: marcojaen			*
 // * Assignment #3: Git and OOP Warmup		*
 // * Date: 07 Oct. 2020				*
 // * Instructor: Dr. David Gaitros		*
